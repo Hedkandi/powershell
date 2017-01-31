@@ -3,7 +3,7 @@ function Get-MsiProperty {
         [string]$MsiDatabasePath,
         [string]$sProperty
     )
-
+    Add-Type -Path "C:\Program Files (x86)\WiX Toolset v4.0\bin\WixToolset.Dtf.WindowsInstaller.dll";
     # Ref: http://www.laurierhodes.info/?q=node/104
 
     Write-Information "Opening '$MsiDatabasePath'"

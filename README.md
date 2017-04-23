@@ -2,7 +2,6 @@
 
 Get-RDPPasswordHash
   Used to generate the hash used in a .rdp-file
-
 CompareVersions
   Comparing versions that is retrieved as string is tricky.
 MSIFuncs.ps1

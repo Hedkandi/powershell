@@ -40,7 +40,7 @@
                     $NewDeploy = $null
                     try {
                         Write-Information "Deploying '$NewApplication' to '$($CurrentDeployment.CollectionName)'"
-                        $NewDeploy = Start-CMApplicationDeployment -InputObject $NewApplication -CollectionName "$($CurrentDeployment.CollectionName)" -DeployAction "$($DesiredConfigType[$CurrentDeployment.DesiredConfigType])" -DeployPurpose "$($DeploymentIntent[$CurrentDeployment.DeploymentIntent])" -UserNotification DisplaySoftwareCenterOnly -PassThru -ErrorAction SilentlyContinue
+                        $NewDeploy = Start-CMApplicationDeployment -Name $NewApplication -CollectionName "$($CurrentDeployment.CollectionName)" -DeployAction "$($DesiredConfigType[$CurrentDeployment.DesiredConfigType])" -DeployPurpose "$($DeploymentIntent[$CurrentDeployment.DeploymentIntent])" -UserNotification DisplaySoftwareCenterOnly -PassThru -ErrorAction SilentlyContinue
                     } catch {
                         if ((Get-CMDeployment -SoftwareName $NewApplication -CollectionName $CurrentDeployment.CollectionName)) {
                             Write-Information "'$NewApplication' is already deployed to '$($CurrentDeployment.CollectionName)'"

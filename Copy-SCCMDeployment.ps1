@@ -1,4 +1,4 @@
-﻿function Copy-CMDeployment {
+﻿function Copy-SCCMDeployment {
     [CmdletBinding(SupportsShouldProcess=$true, 
                   HelpUri = 'http://www.microsoft.com/')]
     param(
